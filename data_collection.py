@@ -12,8 +12,8 @@ class MusicDataCollector:
         """Initialize the music data collector with API credentials."""
         # Spotify setup
         client_credentials_manager = SpotifyClientCredentials(
-            client_id=spotify_client_id,
-            client_secret=spotify_client_secret
+            client_id=0ba8d059a6b74ddf893004408bd7353b,
+            client_secret=6835e7a1c7e04e339c3d7e0edc660389
         )
         self.spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
         
