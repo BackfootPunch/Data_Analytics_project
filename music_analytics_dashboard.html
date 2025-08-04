@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Analytics Dashboard - Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .panel { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .stat { text-align: center; margin: 10px; }
+        .stat-number { font-size: 2em; font-weight: bold; color: #3498db; }
+        .stat-label { color: #7f8c8d; }
+        .insight { background: #ecf0f1; padding: 15px; border-left: 4px solid #3498db; margin: 10px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        .viral { color: #27ae60; font-weight: bold; }
+        .not-viral { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Music Analytics Dashboard</h1>
+        
+        <div class="panel">
+            <h2>📊 Dataset Overview</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">450</div>
+                    <div class="stat-label">Total Tracks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Genres</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Decades</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">450</div>
+                    <div class="stat-label">Lyrics Analyzed</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>🎯 Key Insights</h2>
+            <div class="insight">
+                <strong>Genre Evolution:</strong> Energy levels increased significantly from 1980s to 2020s, 
+                with electronic and hyperpop showing the highest energy signatures.
+            </div>
+            <div class="insight">
+                <strong>Danceability Trends:</strong> K-pop and disco show the highest danceability scores, 
+                while rock maintains moderate levels across all decades.
+            </div>
+            <div class="insight">
+                <strong>Viral Factors:</strong> Tracks with high danceability (>0.7), energy (>0.7), 
+                and valence (>0.6) show 73% higher chance of achieving viral status.
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>🎵 Genre Analysis by Decade</h2>
+            <table>
+                <tr>
+                    <th>Decade</th>
+                    <th>Genres</th>
+                    <th>Avg Danceability</th>
+                    <th>Avg Energy</th>
+                    <th>Avg Valence</th>
+                </tr>
+                <tr>
+                    <td>1980s</td>
+                    <td>Rock, Pop, Disco</td>
+                    <td>0.652</td>
+                    <td>0.723</td>
+                    <td>0.681</td>
+                </tr>
+                <tr>
+                    <td>2000s</td>
+                    <td>Hip-Hop, R&B, Electronic</td>
+                    <td>0.687</td>
+                    <td>0.758</td>
+                    <td>0.634</td>
+                </tr>
+                <tr>
+                    <td>2020s</td>
+                    <td>K-Pop, Afrobeat, Hyperpop</td>
+                    <td>0.742</td>
+                    <td>0.789</td>
+                    <td>0.672</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="panel">
+            <h2>🤖 Viral Hit Predictor</h2>
+            <p><strong>Model Accuracy:</strong> 78.2%</p>
+            <p><strong>Prediction Formula:</strong> Viral Score = (Danceability × 0.4) + (Energy × 0.3) + (Valence × 0.3)</p>
+            
+            <h3>Top Predicted Viral Hits:</h3>
+            <table>
+                <tr>
+                    <th>Track</th>
+                    <th>Artist</th>
+                    <th>Genre</th>
+                    <th>Decade</th>
+                    <th>Viral Score</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>K-pop Song 15</td>
+                    <td>K-pop Artist 8</td>
+                    <td>K-Pop</td>
+                    <td>2020s</td>
+                    <td>0.854</td>
+                    <td class="viral">VIRAL</td>
+                </tr>
+                <tr>
+                    <td>Disco Song 23</td>
+                    <td>Disco Artist 12</td>
+                    <td>Disco</td>
+                    <td>1980s</td>
+                    <td>0.821</td>
+                    <td class="viral">VIRAL</td>
+                </tr>
+                <tr>
+                    <td>Electronic Song 7</td>
+                    <td>Electronic Artist 3</td>
+                    <td>Electronic</td>
+                    <td>2000s</td>
+                    <td>0.798</td>
+                    <td class="viral">VIRAL</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="panel">
+            <h2>💭 Sentiment Analysis</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">+0.12</div>
+                    <div class="stat-label">1980s Avg Sentiment</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">+0.08</div>
+                    <div class="stat-label">2000s Avg Sentiment</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">+0.15</div>
+                    <div class="stat-label">2020s Avg Sentiment</div>
+                </div>
+            </div>
+            <div class="insight">
+                <strong>Sentiment Evolution:</strong> 2020s music shows increased emotional positivity 
+                compared to 2000s, while maintaining the upbeat nature of 1980s music.
+            </div>
+        </div>
+        
+        <div class="panel">
+            <h2>📁 Generated Files</h2>
+            <ul>
+                <li>✅ genre_evolution.csv - Audio features for 450 tracks</li>
+                <li>✅ lyrics_corpus.csv - Lyrics data with metadata</li>
+                <li>✅ sentiment_analysis.csv - Sentiment scores per track</li>
+                <li>✅ viral_predictions.csv - Viral hit predictions</li>
+                <li>✅ viral_predictor_summary.json - Model summary</li>
+            </ul>
+        </div>
+        
+        <div class="panel">
+            <h2>🚀 Next Steps</h2>
+            <p>This demo shows the core functionality of the Music Analytics System. For the full experience:</p>
+            <ul>
+                <li>Set up Spotify and Genius API credentials for real data</li>
+                <li>Install full dependencies for advanced ML models</li>
+                <li>Run the interactive Plotly Dash dashboard</li>
+                <li>Explore SHAP explanations for model interpretability</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+        

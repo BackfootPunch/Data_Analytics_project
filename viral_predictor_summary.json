@@ -1,0 +1,11 @@
+{
+  "model_type": "Rule-based Classifier",
+  "accuracy": 0.6044444444444445,
+  "total_tracks": 450,
+  "viral_threshold": 0.65,
+  "feature_weights": {
+    "danceability": 0.4,
+    "energy": 0.3,
+    "valence": 0.3
+  }
+}
