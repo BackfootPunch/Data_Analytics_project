@@ -18,7 +18,7 @@ class MusicDataCollector:
         self.spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
         
         # Genius setup
-        self.genius = lyricsgenius.Genius(genius_token)
+        self.genius = lyricsgenius.Genius(P1nTdLyDy_2E9mRF-GYoPRp-5UDEZ5yCZghvyi9cPJdI3I1-ixctIjllHXfePNeP)
         self.genius.verbose = False
         self.genius.remove_section_headers = True
         
